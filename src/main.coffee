@@ -1,8 +1,15 @@
-Vue = require 'vue'
+Vue       = require 'vue'
 VueRouter = require 'vue-router'
-Vuex = require 'vuex'
-$ = require('jquery')
+Vuex      = require 'vuex'
+
+routerMap = require './routers'
 
 $ ->
-    alert 1
+    Vue.use VueRouter
+
+    App = Vue.extend {}
+    router = new VueRouter
+
+    routerMap router
+    router.start App, '#app'
 

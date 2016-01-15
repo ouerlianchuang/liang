@@ -2,9 +2,13 @@
   "name": "liang",
   "version": "1.0.0",
   "description": "liang Practice ",
-  "scripts": {},
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w"
+  },
   "devDependencies": {
-    "coffee-loader": "^0.7.2"
+    "coffee-loader": "^0.7.2",
+    "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
     "vue": "^1.0.13",

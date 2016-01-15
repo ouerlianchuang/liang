@@ -25,7 +25,11 @@ module.exports = {
           }
         ]
     },
-   plugins: [
+    resolve: {
+        // require时省略的扩展名，如：require('module') 不需要module.js
+        extensions: ['', '.coffee', '.js'],
+    },
+    plugins: [
     new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
   ]
 };
