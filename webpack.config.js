@@ -1,16 +1,17 @@
-var vue = require('vue-loader');
-var coffee = require('coffee-loader');
-var webpack = require('webpack');
+var webpack = require("webpack");
+
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var publicPath = "/static/";
 
 module.exports = {
     entry: {
-        app:'./src/main.coffee',
+        app:['./src/main.coffee'],
         vendors: ['vue','jquery','vuex','vue-router']
     },
     output: {
-        path: './static',
-        publicPath: '/static/',
-        filename: 'app.js'
+        path: __dirname + publicPath,
+        filename: 'app.js',
+        publicPath: publicPath,
     },
     module: {
         loaders: [
@@ -26,10 +27,10 @@ module.exports = {
         ]
     },
     resolve: {
-        // require时省略的扩展名，如：require('module') 不需要module.js
         extensions: ['', '.coffee', '.js'],
     },
     plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
-  ]
+      new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+    ],
+    devtool: "source-map",
 };

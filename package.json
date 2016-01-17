@@ -7,6 +7,9 @@
     "watch": "webpack -w"
   },
   "devDependencies": {
+    "babel-cli": "^6.4.0",
+    "babel-core": "^6.4.0",
+    "vue-loader": "^8.0.2",
     "coffee-loader": "^0.7.2",
     "webpack-dev-server": "^1.14.0"
   },
