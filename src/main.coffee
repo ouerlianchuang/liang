@@ -1,15 +1,17 @@
 Vue       = require 'vue'
 VueRouter = require 'vue-router'
-Vuex      = require 'vuex'
 
 routerMap = require './routers'
+
+require '../public/less/general.less'
 
 $ ->
     Vue.use VueRouter
 
-    App = Vue.extend {}
+    App = Vue.extend(require './components/app.vue')
+
     router = new VueRouter
 
     routerMap router
-    router.start App, '#app'
 
+    router.start App, '#app'

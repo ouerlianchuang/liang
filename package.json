@@ -3,14 +3,19 @@
   "version": "1.0.0",
   "description": "liang Practice ",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack -w"
+    "clean-build": "NODE_ENV='clean-build' gulp clean-build",
+    "build": "NODE_ENV='build' gulp build"
   },
   "devDependencies": {
     "babel-cli": "^6.4.0",
     "babel-core": "^6.4.0",
-    "vue-loader": "^8.0.2",
     "coffee-loader": "^0.7.2",
+    "gulp-md5-plus": "^0.2.0",
+    "html-webpack-plugin": "^1.7.0",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.2",
+    "vue-loader": "^8.0.2",
+    "vue-style-loader": "^1.0.0",
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
