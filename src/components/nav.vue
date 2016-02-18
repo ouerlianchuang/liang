@@ -22,21 +22,22 @@
           return store.state.menuShow
       methods:
         menuClick: ->
-          clearTimeout timer
-          menu = $('.liang-menu')
-          menu.addClass 'stretching'
-          timer = setTimeout ->
-            console.log 111
-            if not store.state.menuShow
-              menu.removeClass 'stretching'
-          , 700
           store.actions.menuClick()
-          this.$dispatch 'menu-show'
+          # clearTimeout timer
+          # menu = $('.liang-menu')
+          # menu.addClass 'stretching'
+          # timer = setTimeout ->
+          #   console.log 111
+          #   if not store.state.menuShow
+          #     menu.removeClass 'stretching'
+          # , 700
+          # store.actions.menuClick()
+          # this.$dispatch 'menu-show'
     }
 </script>
 
-<style>
-  #llliang {
+<style lang="less">
+  #test {
     color: white;
   }
 </style>
